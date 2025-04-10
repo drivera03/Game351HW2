@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    Rigidbody rb;
+    float forceAmount = 0f;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        //Get the rigidbody from the start when we first call upon the game
+        rb = GetComponent<Rigidbody>();
+    
     }
 
     // Update is called once per frame
@@ -27,5 +31,40 @@ public class Movement : MonoBehaviour
         if (Input.GetKey (KeyCode.Space))
             // increment the game object's translation
             transform.Translate(0, 0, 0.1f);
+           //need to find the right amount of force amount needed
+           //this makes it lean in the direction that it ment to
+            forceAmount = 4f;
+            Addforce();
+
+
+        if(Input.GetKey (KeyCode.W))
+            //forwards
+            transform.Translate(0,0,.1f);
+
+        if(Input.GetKey (KeyCode.A))
+            //left
+            transform.Translate(-.1f,0,0);
+
+        if(Input.GetKey (KeyCode.S))
+            //backwards or reverse 
+            transform.Translate(0,0,-.1f);
+
+        if(Input.GetKey (KeyCode.D))
+            //right
+            transform.Translate(.1f,0,0);
+
+
     }
+
+
+void Addforce(){
+
+    //need to fix so it only when every the player actaully presses on it and not just moving on it own
+    //more then likely will be some if statments
+    
+rb.AddForce(transform.forward * forceAmount);
+
+}
+   
+
 }
