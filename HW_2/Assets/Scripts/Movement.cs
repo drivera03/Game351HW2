@@ -28,31 +28,32 @@ public class Movement : MonoBehaviour
 
         // translate by 0.1m on Z axis each frame for as long as
         // the space bar is held down
-        if (Input.GetKey (KeyCode.Space))
+        if (Input.GetKey  (KeyCode.Space)){
             // increment the game object's translation
             transform.Translate(0, 0, 0.1f);
            //need to find the right amount of force amount needed
            //this makes it lean in the direction that it ment to
             forceAmount = 4f;
             Addforce();
+        }
 
 
-        if(Input.GetKey (KeyCode.W))
+        if(Input.GetKey  (KeyCode.W)){
             //forwards
             transform.Translate(0,0,.1f);
-
-        if(Input.GetKey (KeyCode.A))
+        }
+        if(Input.GetKey (KeyCode.A)){
             //left
             transform.Translate(-.1f,0,0);
-
-        if(Input.GetKey (KeyCode.S))
+        }
+        if(Input.GetKey (KeyCode.S)){
             //backwards or reverse 
             transform.Translate(0,0,-.1f);
-
-        if(Input.GetKey (KeyCode.D))
+        }
+        if(Input.GetKey (KeyCode.D)){
             //right
             transform.Translate(.1f,0,0);
-
+        }
 
     }
 
@@ -63,6 +64,7 @@ void Addforce(){
     //more then likely will be some if statments
     
 rb.AddForce(transform.forward * forceAmount);
+
 
 }
    
