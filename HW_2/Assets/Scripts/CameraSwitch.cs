@@ -14,6 +14,7 @@ public class CameraSwitch : MonoBehaviour
         {
             cameras[i].gameObject.SetActive(i == currentCameraIndex);
         }
+        
     }
 
     void Update()
@@ -36,4 +37,5 @@ public class CameraSwitch : MonoBehaviour
         // Enable the new current camera
         cameras[currentCameraIndex].gameObject.SetActive(true);
     }
+    
 }
