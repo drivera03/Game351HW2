@@ -5,11 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
-    float forceAmount = 0f;
     // Start is called before the first frame update
     void Start() {
         //Get the rigidbody from the start when we first call upon the game
         rb = GetComponent<Rigidbody>();
+
     
     }
 
@@ -26,16 +26,17 @@ public class Movement : MonoBehaviour
         // set the game object's translation (not an increment)
         transform.position = position;
 
-        // translate by 0.1m on Z axis each frame for as long as
-        // the space bar is held down
-        if (Input.GetKey  (KeyCode.Space)){
-            // increment the game object's translation
-            transform.Translate(0, 0, 0.1f);
-           //need to find the right amount of force amount needed
-           //this makes it lean in the direction that it ment to
-            forceAmount = 4f;
-            Addforce();
-        }
+        // // translate by 0.1m on Z axis each frame for as long as
+        // // the space bar is held down
+        // if (Input.GetKey  (KeyCode.Space)){
+        //     // increment the game object's translation
+        //     transform.Translate(0, 0, 0.1f);
+        //    //need to find the right amount of force amount needed
+        //    //this makes it lean in the direction that it ment to
+        //     forceAmount = 4f;
+        //     Addforce();
+        // }
+
 
 
         if(Input.GetKey  (KeyCode.W)){
@@ -56,6 +57,12 @@ public class Movement : MonoBehaviour
         }
 
     }
+
+
+
+
+
+
 
 
 void Addforce(){
