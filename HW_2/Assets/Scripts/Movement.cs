@@ -70,7 +70,7 @@ void Addforce(){
     //need to fix so it only when every the player actaully presses on it and not just moving on it own
     //more then likely will be some if statments
     
-rb.AddForce(transform.forward * forceAmount);
+    //rb.AddForce(transform.forward * forceAmount);
 
 
 }
