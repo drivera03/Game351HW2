@@ -5,6 +5,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody rb;
+    public float Speed = 25f;
+    public float Corner = 1.0f;
     // Start is called before the first frame update
     void Start() {
         //Get the rigidbody from the start when we first call upon the game
@@ -37,23 +39,23 @@ public class Movement : MonoBehaviour
         //     Addforce();
         // }
 
-
+       
 
         if(Input.GetKey  (KeyCode.W)){
             //forwards
-            transform.Translate(0,0,.1f);
+            transform.Translate(0,0,Speed * Time.deltaTime);
         }
         if(Input.GetKey (KeyCode.A)){
             //left
-            transform.Translate(-.1f,0,0);
+            transform.Rotate(0,Corner * Time.deltaTime,0);
         }
         if(Input.GetKey (KeyCode.S)){
             //backwards or reverse 
-            transform.Translate(0,0,-.1f);
+            transform.Translate(0,0,-Speed * Time.deltaTime);
         }
         if(Input.GetKey (KeyCode.D)){
             //right
-            transform.Translate(.1f,0,0);
+            transform.Rotate(0,-Corner * Time.deltaTime,0);
         }
 
     }
