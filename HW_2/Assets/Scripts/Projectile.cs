@@ -8,16 +8,20 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] private float LaunchForce = 3000f;
 
-    [SerializeField] private float destroyAfterSeconds = 5f;
+    public float TimeToLive = 5f;
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.forward * LaunchForce;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, destroyAfterSeconds);
+        if (gameObject.name == "BulletPrefab(Clone)")
+        {
+            Destroy(gameObject, TimeToLive);
+        }
     }
 }
