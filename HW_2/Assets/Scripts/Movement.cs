@@ -40,22 +40,25 @@ public class Movement : MonoBehaviour
         // }
 
        
-
         if(Input.GetKey  (KeyCode.W)){
             //forwards
-            transform.Translate(0,0,Speed * Time.deltaTime);
+            //transform.Translate(0,0,Speed * Time.deltaTime);
+            rb.AddForce(transform.forward * Speed, ForceMode.Force);
         }
         if(Input.GetKey (KeyCode.A)){
             //left
-            transform.Rotate(0,-Corner * Time.deltaTime,0);
+            transform.Rotate(Vector3.up * -Corner * Time.fixedDeltaTime);
+            //transform.Rotate(0,-Corner * Time.deltaTime,0);
         }
         if(Input.GetKey (KeyCode.S)){
             //backwards or reverse 
-            transform.Translate(0,0,-Speed * Time.deltaTime);
+            //transform.Translate(0,0,-Speed * Time.deltaTime);
+            rb.AddForce(transform.forward * -Speed, ForceMode.Force);
         }
         if(Input.GetKey (KeyCode.D)){
             //right
-            transform.Rotate(0,Corner * Time.deltaTime,0);
+            transform.Rotate(Vector3.up * Corner * Time.fixedDeltaTime);
+            //transform.Rotate(0,Corner * Time.deltaTime,0);
         }
 
     }

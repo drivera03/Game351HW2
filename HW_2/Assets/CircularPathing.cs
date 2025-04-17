@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CircularPathing : MonoBehaviour
 {
+    // Target object to look at (drag object in editor)
+    [SerializeField]
+    private GameObject TargetObject;
+
     public Transform centerPoint; // The object around which the character orbits
     public float radius = 2f;       // The distance from the center
     public float speed = 1f;         // How quickly the character moves
@@ -21,5 +25,11 @@ public class CircularPathing : MonoBehaviour
 
         // Update the character's position
         transform.position = new Vector3(x, transform.position.y, z);
+
+        // Look at different object
+        transform.LookAt(TargetObject.transform);
+
+        // Rotate THIS object
+        transform.Rotate(0, 90, 0);
     }
 }
