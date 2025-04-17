@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
         }
         if(Input.GetKey (KeyCode.A)){
             //left
-            transform.Rotate(0,Corner * Time.deltaTime,0);
+            transform.Rotate(0,-Corner * Time.deltaTime,0);
         }
         if(Input.GetKey (KeyCode.S)){
             //backwards or reverse 
@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
         }
         if(Input.GetKey (KeyCode.D)){
             //right
-            transform.Rotate(0,-Corner * Time.deltaTime,0);
+            transform.Rotate(0,Corner * Time.deltaTime,0);
         }
 
     }
