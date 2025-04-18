@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space))
         {
             foreach (Transform SpawnPoint in bulletSpawnPoints)
             {
