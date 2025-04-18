@@ -47,17 +47,29 @@ public class Movement : MonoBehaviour
         }
         if(Input.GetKey (KeyCode.A)){
             //left
-            transform.Rotate(Vector3.up * -Corner * Time.fixedDeltaTime);
+ 
+            transform.Rotate(0, -Corner * Time.deltaTime, 10 * Time.deltaTime, Space.World);
             //transform.Rotate(0,-Corner * Time.deltaTime,0);
         }
         if(Input.GetKey (KeyCode.S)){
             //backwards or reverse 
             //transform.Translate(0,0,-Speed * Time.deltaTime);
-            rb.AddForce(transform.forward * -Speed, ForceMode.Force);
+            rb.AddForce(transform.forward * -Speed , ForceMode.Force);
+            
         }
         if(Input.GetKey (KeyCode.D)){
             //right
-            transform.Rotate(Vector3.up * Corner * Time.fixedDeltaTime);
+            transform.Rotate(0, Corner * Time.deltaTime, -10 * Time.deltaTime, Space.World); //and then turn the plane
+            //transform.Rotate(0,Corner * Time.deltaTime,0);
+        }
+        if(Input.GetKey (KeyCode.Q)){
+            //right
+            transform.Rotate(0, 0, 1 ); //and then turn the plane
+            //transform.Rotate(0,Corner * Time.deltaTime,0);
+        }
+        if(Input.GetKey (KeyCode.E)){
+            //right
+            transform.Rotate(0, 0, -1 ); //and then turn the plane
             //transform.Rotate(0,Corner * Time.deltaTime,0);
         }
 
