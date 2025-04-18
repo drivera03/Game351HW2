@@ -24,9 +24,7 @@ Way 1:
 12) Make sure to use Version 2021.3.5f1
 13) Then, open the unity project and click continue through all the errors.
 14) Once the project has opened, click on asset at the top
-15) Then look for import packages and click on custom packages
-16) Look for the asset package that was downloaded from Google Drive and download it
-17) Once that is done the project should be good to go
+15) Once that is done the project should be good to go
 
 
 Way 2:
