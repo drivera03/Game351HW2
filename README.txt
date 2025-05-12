@@ -1,11 +1,10 @@
 ________________________________________________________________________________________________
 The different features that are added to our unity project are
-1. Driving a HoverCraft (WASD to drive then Q to lean left and E to lean right)
-2. Three Car Types
-3. Hovercraft Levitation 
-4. Toggling between Cars (C key)
-5. Laser-Firing Car (Purple car/Laser car)
-6. More Realistic Effects(Tail light with bloom and trails, sound to the lasers, engine particle)
+1. Shoot with the F key 
+2. Two different camera views (T key)
+3. The enemy shoots back at the player and also follow the player
+4. Player can kick and there are 3 different animation
+
 
 Two ways to install the Unity Project:
 
@@ -41,4 +40,4 @@ Credits:
 Made By: Daniel Rivera, Taylor Poole, Tristian Costa 
 
 Freeware media assets were used from the following sources:
-(1) https://www.myinstants.com/en/instant/star-wars-blaster-42067/
+
